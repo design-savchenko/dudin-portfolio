@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="./images/favicon.svg" />
+    <script defer src="./app.js"></script>
+    <title>Oleksandr Dudin | Portfolio</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-main container">
+          <div class="logo-container">
+            <a href="./index.html"><span class="logo">Dudin Oleksandr</span></a>
+          </div>
+          <button class="hamburger">
+            <div class="bar"></div>
+          </button>
+          <div class="nav-menu" id="navsub">
+            <!-- <a href="#">Home</a> -->
+            <!-- <a href="./about.html">About</a> -->
+            <a target="_blank" href="./images/CV_Dudin.pdf">Resume</a>
+            <a href="mailto:alexdudin16031991@gmail.com"
+              ><button class="main-btn">Contact</button></a
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <nav class="mobile-nav">
+      <div class="m-nav-flex"></div>
+      <!-- <a href="./index.html">Home</a> -->
+      <!-- <a href="./about.html">About</a> -->
+      <a target="_blank" href="./images/CV_Dudin.pdf">Resume</a>
+
+      <div class="footer-cta-mobile">
+        <h4>Have an interesting project?</h4>
+        <h1>Let’s get in touch</h1>
+
+        <a href="mailto:alexdudin16031991@gmail.com"
+          ><button class="main-btn footer-btn">Contact</button></a
+        >
+
+        <div class="social-mobile">
+          <a href="https://www.linkedin.com/in/oleksandrdudin/"
+            ><i class="bx bxl-linkedin"></i
+          ></a>
+
+          <a href="https://www.instagram.com/alexinstdudin/"
+            ><i class="bx bxl-instagram-alt"></i
+          ></a>
+
+          <a href="https://www.behance.net/lexdudin"
+            ><i class="bx bxl-behance"></i
+          ></a>
+        </div>
+      </div>
+    </nav>
+
+    <section>
+      <div class="first-main container">
+        <h1>
+          We need to jump on the table more often - <br />
+          to see the world from a different perspective.
+        </h1>
+        <div class="f-m-item">
+          <a href="#projects"><span>View my portfolio</span></a>
+          <img src="./images/arrow_down.svg" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="scrollbtn">
+        <div class="container">
+          <div onclick="scrollToTop()" class="scrollTop">
+            <i class="bx bx-arrow-back"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="first-about-main container">
+        <div class="about-img">
+          <img src="./images/about-img.jpg" alt="" />
+          <div class="about-text">
+            <h2>Hello, my name is Oleksandr, I'm from Kyiv, Ukraine.</h2>
+            <p class="about-spec">
+              I'm a designer with over 5 years of experience in analyzing
+              different types of interaction and designing interfaces for web
+              graphics, web and applications. <br />
+              I develop complex projects (websites, landing pages,
+              applications). I have good experience in graphic, industrial and
+              interior design. I have a good understanding of the basics of
+              printing, document layout, infographics and illustrations.
+            </p>
+            <p class="about-spec">
+              I am constantly engaged in self-development and learning. I read a
+              lot, love listening to music, collect vintage vinyl records,
+              regularly maintain my physical and moral condition, and love
+              traveling with my family.
+            </p>
+            <p class="about-spec">
+              <b>Warning:</b> I do not cooperate with russian citizens and
+              condemn what they do, I hate them with all my heart and actively
+              support the Armed Forces of Ukraine - bringing our victory closer.
+            </p>
+            <p class="end">Glory to Ukraine! Glory to the heroes! 🇺🇦</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" id="projects">
+      <div class="card-theme">
+        <div class="card-1">
+          <a href="#">
+            <div class="card-main hidden">
+              <img src="./images/card-2.jpg" alt="" />
+              <div class="card-item">
+                <p>UI/UX | Application | Graphic design</p>
+                <h4>In9 - Concierge wealth management app (Soon)</h4>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="card-1">
+          <a href="./wear_weather_app.html">
+            <div class="card-main hidden">
+              <img class="hover-card" src="./images/card-1.jpg" alt="" />
+              <div class="card-item">
+                <p>UI/UX | Application | Graphic design</p>
+                <h4>Wear the Weather - Lifestyle App</h4>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="card-1">
+          <a href="./diia_emalyatko_service.html">
+            <div class="card-main hidden">
+              <img class="hover-card" src="./images/card-3.jpg" alt="" />
+              <div class="card-item">
+                <p>UI/UX | Web & Mobile | Research | Concept</p>
+                <h4>Diia - eMalyatko service</h4>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="card-1">
+          <a href="./blackshield_capital_investment_p.html">
+            <div class="card-main hidden">
+              <img class="hover-card" src="./images/card-4.jpg" alt="" />
+              <div class="card-item">
+                <p>UI/UX | Web & Mobile | Research | Graphic design</p>
+                <h4>Blackshield Capital - Investment Portal</h4>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="card-1 card-theme-item">
+          <a href="./blackshield_capital_rebranding.html">
+            <div class="card-main hidden">
+              <img class="hover-card" src="./images/card-5.jpg" alt="" />
+              <div class="card-item">
+                <p>UI/UX | Web & Mobile | Research | Graphic design</p>
+                <h4>Blackshield Capital - Rebranding</h4>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="third-main">
+      <div class="container">
+        <div class="footer-cta">
+          <h4>Have an interesting project?</h4>
+          <h1>Let’s get in touch</h1>
+
+          <a href="mailto:alexdudin16031991@gmail.com"
+            ><button class="main-btn footer-btn">Contact</button></a
+          >
+
+          <div class="social">
+            <a href="https://www.linkedin.com/in/oleksandrdudin/"
+              ><i class="bx bxl-linkedin"></i
+            ></a>
+
+            <a href="https://www.instagram.com/alexinstdudin/"
+              ><i class="bx bxl-instagram-alt"></i
+            ></a>
+
+            <a href="https://www.behance.net/lexdudin"
+              ><i class="bx bxl-behance"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

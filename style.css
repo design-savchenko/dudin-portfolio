@@ -1,0 +1,1199 @@
+@font-face {
+  font-family: SF Pro Display Bold;
+  src: url(./fonts/SF-Pro-Display-Bold.otf);
+}
+
+@font-face {
+  font-family: SF Pro Display Regular;
+  src: url(./fonts/SF-Pro-Display-Regular.otf);
+}
+
+@font-face {
+  font-family: SF Pro Display SemiBold;
+  src: url(./fonts/SF-Pro-Display-Semibold.otf);
+}
+
+@font-face {
+  font-family: SF Pro Display Medium;
+  src: url(./fonts/SF-Pro-Display-Medium.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+b {
+  width: 600px;
+  color: #000;
+  font-family: -apple-system, SF Pro Display Bold;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  padding-bottom: 96px;
+}
+
+/* animation text hidden */
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(50%);
+  transition: all 0.5s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+/* animation text hidden end */
+
+.bg-black {
+  background: #000;
+}
+
+.padding-p {
+  padding-top: 48px;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.scrollbtn .container {
+  max-width: 1200px;
+}
+
+.scrollTop {
+  position: fixed;
+  bottom: 180px;
+  right: 120px;
+  padding: 8px 8px;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  z-index: 10;
+  transition: all 0.5s ease;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.scrollTop.is-active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.scrollTop:hover {
+  background-color: #000;
+  border: 1px solid #fff;
+}
+
+.scrollTop i {
+  font-size: 24px;
+  color: #fff;
+  mix-blend-mode: difference;
+  transform: rotate(90deg);
+}
+
+nav {
+  padding-top: 48px;
+}
+
+.nav-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.nav-main a {
+  text-decoration: none;
+}
+
+.logo {
+  font-family: -apple-system, SF Pro Display Bold;
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+  mix-blend-mode: difference;
+}
+
+.logo.is-active {
+  color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+.nav-menu a {
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  font-family: -apple-system, SF Pro Display Regular;
+  font-size: 18px;
+  font-weight: 400;
+  transition: all 0.3s ease-in-out;
+}
+
+#navsub > a {
+  cursor: pointer;
+}
+#navsub > a.active {
+  color: #000;
+  font-family: -apple-system, SF Pro Display SemiBold;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.noDisplay {
+  display: none;
+}
+
+.main-btn {
+  text-align: center;
+  background-color: #000;
+  width: 104px;
+  height: 41px;
+  color: #fff;
+  font-family: -apple-system, SF Pro Display Regular;
+  font-size: 18px;
+  font-weight: 400;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.main-btn:focus,
+.main-btn-project:focus {
+  background-color: #000;
+  color: #fff;
+}
+
+.main-btn:hover {
+  text-align: center;
+  color: #000;
+  background: none;
+  border: 1px solid #000;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.main-btn-disabled {
+  position: relative;
+  text-align: center;
+  background-color: #bdbdbd;
+  padding: 16px 24px;
+  color: #fff;
+  font-family: -apple-system, SF Pro Display Regular;
+  font-size: 18px;
+  font-weight: 400;
+  border: 1px solid transparent;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  margin: 48px 0 96px 0;
+}
+
+.main-btn-project {
+  position: relative;
+  text-align: center;
+  background-color: #000;
+  padding: 16px 24px;
+  color: #fff;
+  font-family: -apple-system, SF Pro Display Regular;
+  font-size: 18px;
+  font-weight: 400;
+  border: 1px solid #000;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  margin: 48px 0 96px 0;
+}
+
+.main-btn-project:hover {
+  position: relative;
+  text-align: center;
+  color: #000;
+  background: none;
+  border: 1px solid #000;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.main-btn:active,
+.main-btn-project:active {
+  background-color: #000;
+  color: #fff;
+  transform: scale(0.95);
+}
+
+.first-main {
+  padding: 192px 0;
+}
+
+.first-main h1 {
+  color: #000;
+  font-family: -apple-system, SF Pro Display Regular;
+  font-size: 48px;
+  font-weight: 400;
+  padding-bottom: 48px;
+}
+
+.first-about-main {
+  overflow: hidden;
+}
+
+.first-about-main h1 {
+  padding-top: 192px;
+  width: 1024px;
+  color: #000;
+  font-family: -apple-system, SF Pro Display Regular;
+  font-size: 48px;
+  font-weight: 400;
+  padding-bottom: 48px;
+}
+
+.first-about-main h2 {
+  color: #000;
+  font-family: -apple-system, SF Pro Display Regular;
+  font-size: 24px;
+  font-weight: 400;
+  padding-bottom: 48px;
+}
+
+.first-about-main p {
+  width: 600px;
+  color: #000;
+  font-family: -apple-system, SF Pro Display Regular;
+  font-size: 18px;
+  line-height: 28px;
+  padding-bottom: 48px;
+}
+
+.first-about-main .about-spec {
+  width: 576px;
+  color: #000;
+  font-family: -apple-system, SF Pro Display Regular;
+  font-size: 18px;
+  line-height: 28px;
+  padding-bottom: 48px;
+}
+
+.first-about-main .end {
+  width: 600px;
+  color: #000;
+  font-family: -apple-system, SF Pro Display Bold;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+  padding-bottom: 192px;
+}
+
+.f-m-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #000;
+  font-family: -apple-system, SF Pro Display SemiBold;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.f-m-item a {
+  text-decoration: none;
+  color: #000;
+  /* border-bottom: 2px solid #000; */
+}
+
+.f-m-item img {
+  height: 24px;
+  position: relative;
+  top: 8px;
+}
+
+.f-m-item a {
+  text-decoration: none;
+  color: #000;
+}
+
+.second-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-1 a {
+  text-decoration: none;
+}
+
+.card-theme {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 36px;
+  width: 100%;
+  transition: 0.5s all ease-in-out;
+}
+
+.card-theme-item {
+  margin-bottom: 96px;
+}
+
+.card-main {
+  margin: 0 0 36px 0;
+}
+
+.card-main img {
+  width: 100%;
+  object-fit: cover;
+
+  /* animation: fade-in linear forward;
+        scale: 0;
+        opacity: 0%;
+        animation-timeline: view();
+        animation-range-start: entry -50px;
+        animation-range-end: exit -50px;
+        transform-origin: bottom; */
+}
+
+.hover-card {
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform-style: preserve-3d;
+  transition: all 0.3s ease-in-out;
+}
+
+.hover-card:hover {
+  transition: all 0.3s ease-in-out;
+  transform: translate3d(0px, -20px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform-style: preserve-3d;
+}
+
+.card-item {
+  width: 400px;
+}
+
+.card-item p {
+  color: #bdbdbd;
+  font-family: -apple-system, SF Pro Display SemiBold;
+  font-size: 14px;
+  font-weight: 600;
+  padding-top: 16px;
+  width: 100%;
+}
+
+.card-item h4 {
+  color: #000;
+  font-family: -apple-system, SF Pro Display SemiBold;
+  font-size: 18px;
+  font-weight: 600;
+  padding-top: 8px;
+}
+
+.card-item a {
+  text-decoration: none;
+}
+
+.card-item a:hover {
+  opacity: 0.7;
+}
+
+.third-main {
+  padding-top: 96px;
+  padding-bottom: 96px;
+  /* background-image: url(./images/footer.jpg); */
+  background-color: #000;
+}
+
+.about-img {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
+.about-project-img {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  padding-bottom: 48px;
+}
+
+.about-img img {
+  width: 582px;
+  height: 553px;
+  object-fit: cover;
+}
+
+.about-project-img img {
+  width: 518px;
+  height: 678px;
+  object-fit: cover;
+}
+
+.footer-cta h4 {
+  color: #fff;
+  font-family: -apple-system, SF Pro Display SemiBold;
+  font-size: 18px;
+  font-weight: 600;
+  padding-bottom: 8px;
+}
+
+.footer-cta h1 {
+  color: #fff;
+  font-family: -apple-system, SF Pro Display Regular;
+  font-size: 48px;
+  font-weight: 400;
+  padding-bottom: 48px;
+}
+
+.footer-cta p {
+  color: #fff;
+  width: 667px;
+  font-family: -apple-system, SF Pro Display Regular;
+  font-size: 18px;
+  font-weight: 400;
+  padding-bottom: 48px;
+}
+
+.footer-cta-mobile h4 {
+  color: #000;
+  font-family: -apple-system, SF Pro Display SemiBold;
+  font-size: 18px;
+  font-weight: 600;
+  padding-bottom: 8px;
+}
+
+.footer-cta-mobile h1 {
+  color: #000;
+  font-family: -apple-system, SF Pro Display Regular;
+  font-size: 48px;
+  font-weight: 400;
+  padding-bottom: 48px;
+}
+
+.footer-cta-mobile p {
+  color: #000;
+  width: 667px;
+  font-family: -apple-system, SF Pro Display Regular;
+  font-size: 18px;
+  font-weight: 400;
+  padding-bottom: 48px;
+}
+
+.social {
+  padding-top: 48px;
+  width: 104px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.social-mobile {
+  padding-top: 12px;
+  width: 104px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.social-mobile i {
+  font-size: 16px;
+  color: #fff;
+  padding: 4px;
+  border: 2px solid #fff;
+  border-radius: 52px;
+  transition: all 0.3s ease-in-out;
+}
+
+.social-mobile i:hover {
+  transition: all 0.3s ease-in-out;
+  background-color: #fff;
+  font-size: 16px;
+  color: #000;
+  padding: 4px;
+  border: 2px solid #fff;
+}
+
+.social i {
+  font-size: 16px;
+  color: #fff;
+  padding: 4px;
+  border: 2px solid #fff;
+  border-radius: 52px;
+  transition: all 0.3s ease-in-out;
+}
+
+.social i:hover {
+  transition: all 0.3s ease-in-out;
+  background-color: #fff;
+  font-size: 16px;
+  color: #000;
+  padding: 4px;
+  border: 2px solid #fff;
+}
+
+.footer-btn {
+  text-align: center;
+  background-color: #fff;
+  width: 104px;
+  height: 41px;
+  color: #000;
+  font-family: -apple-system, SF Pro Display Regular;
+  font-size: 18px;
+  font-weight: 400;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer-btn:hover {
+  text-align: center;
+  color: #fff;
+  background: none;
+  border: 1px solid #fff;
+  cursor: pointer;
+  position: relative;
+}
+
+.projects-btn {
+  display: block;
+  padding: 86px 0;
+  text-decoration: none;
+  color: #000;
+  font-family: -apple-system, SF Pro Display SemiBold;
+  font-size: 18px;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+.project-btn-bottom {
+  padding-top: 24px;
+  display: block;
+  color: #000;
+  font-family: -apple-system, SF Pro Display Bold;
+  font-size: 18px;
+  font-weight: 700;
+  transition: all 0.3s ease-in-out;
+  padding-bottom: 96px;
+}
+
+.project-btn-bottom:hover {
+  opacity: 0.7;
+}
+
+.project-text h2 {
+  color: #000;
+  font-family: -apple-system, SF Pro Display Regular;
+  font-size: 24px;
+  font-weight: 400;
+  padding-bottom: 8px;
+}
+
+.project-text h4 {
+  color: #bdbdbd;
+  font-family: -apple-system, SF Pro Display SemiBold;
+  font-size: 18px;
+  font-weight: 600;
+  padding-bottom: 24px;
+}
+
+.project-text p {
+  width: 600;
+  color: #000;
+  font-family: -apple-system, SF Pro Display Regular;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  padding-bottom: 24px;
+}
+
+.project-text .title,
+.first-about-main .title {
+  width: 600px;
+  color: #000;
+  font-family: -apple-system, SF Pro Display Bold;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  padding-bottom: 8px;
+}
+
+.first-about-main .subtitle {
+  width: 600px;
+  color: #000;
+  font-family: -apple-system, SF Pro Display Medium;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  padding-bottom: 8px;
+}
+
+.first-about-main .description {
+  width: 1200px;
+  color: #000;
+  font-family: -apple-system, SF Pro Display Regular;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  padding-bottom: 16px;
+}
+
+.hamburger {
+  position: relative;
+  display: block;
+  width: 24px;
+  cursor: pointer;
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.hamburger .bar,
+.hamburger:after,
+.hamburger:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #000;
+  margin: 4px 0;
+  transition: 0.4s;
+  border-radius: 4px;
+}
+
+.hamburger.is-active .bar.is-active,
+.hamburger.is-active:after,
+.hamburger.is-active:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  margin: 4px 0;
+  transition: 0.4s;
+  border-radius: 4px;
+}
+
+.mobile-nav {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100vh;
+  min-height: 200px;
+  z-index: 99;
+  background-color: #000;
+  margin-top: 80px;
+  padding: 16px;
+  transition: all 0.1s ease;
+}
+
+.mobile-nav a {
+  display: block;
+  text-decoration: none;
+
+  color: #fff;
+  font-family: -apple-system, SF Pro Display Regular;
+  font-size: 18px;
+  font-weight: 400;
+  transition: all 0.3s ease-in-out;
+  padding: 16px 0;
+}
+
+.mobile-nav.is-active {
+  left: 0;
+}
+
+.mobile-nav a:hover {
+  color: #fff;
+  font-family: -apple-system, SF Pro Display SemiBold;
+  font-size: 18px;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  mix-blend-mode: difference;
+}
+
+.m-nav-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* padding-bottom: 16px; */
+}
+
+.hamburger.is-active:before {
+  transform: rotate(-45deg) translate(-3px, 4px);
+}
+
+.hamburger.is-active:after {
+  transform: rotate(45deg) translate(-6px, -6px);
+}
+
+.hamburger.is-active .bar {
+  opacity: 0;
+}
+
+@media screen and (min-width: 919px) {
+  .container {
+    margin: 0 auto;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .scrollTop {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    margin: 0 16px;
+  }
+
+  br {
+    display: none;
+  }
+
+  nav {
+    padding-top: 32px;
+  }
+
+  .logo-container {
+    font-family: -apple-system, SF Pro Display Bold;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  .first-main {
+    display: block;
+  }
+
+  .first-main h1 {
+    color: #000;
+    font-family: -apple-system, SF Pro Display Regular;
+    font-size: 32px;
+    font-weight: 400;
+    padding-bottom: 48px;
+  }
+
+  .about-project-img {
+    display: block;
+    padding-bottom: 24px;
+  }
+
+  .card-theme {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 36px;
+    width: 100%;
+    transition: 0.5s all ease-in-out;
+    overflow: hidden;
+  }
+
+  .card-theme-item {
+    margin-bottom: 96px;
+  }
+
+  .card-main {
+    grid-column: unset;
+  }
+
+  .card-main img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    aspect-ratio: 9 / 16;
+  }
+
+  .footer-cta h4 {
+    color: #fff;
+    font-family: -apple-system, SF Pro Display SemiBold;
+    font-size: 18px;
+    font-weight: 600;
+    padding-bottom: 8px;
+  }
+
+  .footer-cta h1 {
+    color: #fff;
+    font-family: -apple-system, SF Pro Display Regular;
+    font-weight: 400;
+    font-size: 32px;
+    padding-bottom: 48px;
+  }
+
+  .footer-cta p {
+    color: #fff;
+    width: 100%;
+    font-family: -apple-system, SF Pro Display Regular;
+    font-weight: 400;
+    font-size: 18px;
+    padding-bottom: 48px;
+  }
+
+  .footer-cta-mobile h4 {
+    padding-top: 48px;
+    color: #fff;
+    font-family: -apple-system, SF Pro Display SemiBold;
+    font-size: 18px;
+    font-weight: 600;
+    padding-bottom: 8px;
+  }
+
+  .footer-cta-mobile h1 {
+    color: #fff;
+    font-family: -apple-system, SF Pro Display Regular;
+    font-weight: 400;
+    font-size: 32px;
+    padding-bottom: 24px;
+  }
+
+  .footer-cta-mobile p {
+    color: #fff;
+    width: 100%;
+    font-family: -apple-system, SF Pro Display Regular;
+    font-weight: 400;
+    font-size: 18px;
+    padding-bottom: 24px;
+  }
+
+  .first-about-main h1 {
+    padding-top: 192px;
+    width: 100%;
+    color: #000;
+    font-family: -apple-system, SF Pro Display Regular;
+    font-size: 32px;
+    padding-bottom: 48px;
+  }
+
+  .first-about-main h2 {
+    color: #000;
+    font-family: -apple-system, SF Pro Display Regular;
+    font-weight: 400;
+    font-size: 24px;
+    padding-bottom: 48px;
+  }
+
+  .first-about-main p,
+  .first-about-main .about-spec {
+    width: 100%;
+    color: #000;
+    font-family: -apple-system, SF Pro Display Regular;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    padding-bottom: 48px;
+  }
+
+  .first-about-main .end {
+    width: 600px;
+    color: #000;
+    font-family: -apple-system, SF Pro Display Bold;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    padding-bottom: 192px;
+  }
+
+  .scrollTop {
+    bottom: 170px;
+    right: 16px;
+  }
+
+  .about-img {
+    display: block;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+
+  .about-img img,
+  .about-project-img img {
+    width: 100%;
+    height: 553px;
+    object-fit: cover;
+    padding-bottom: 48px;
+  }
+
+  .first-about-main .description,
+  .first-about-main .subtitle,
+  .first-about-main .title {
+    width: 100%;
+  }
+
+  .project-text h2 {
+    font-size: 24px;
+    letter-spacing: -0.01em;
+    padding-bottom: 8px;
+  }
+
+  .footer-cta-mobile .logo .footer-cta-mobile .social {
+    padding-top: 24px;
+    width: 104px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer-cta-mobile .social i {
+    font-size: 16px;
+    color: #fff;
+    padding: 4px;
+    border: 2px solid #fff;
+    border-radius: 52px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .footer-cta-mobile .social i:hover {
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+    font-size: 16px;
+    color: #fff;
+    padding: 4px;
+    border: 2px solid #fff;
+  }
+
+  .padding-p {
+    padding-top: 48px;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .container {
+    margin: 0 16px;
+  }
+
+  nav {
+    padding-top: 32px;
+  }
+
+  .logo-container {
+    font-family: -apple-system, SF Pro Display Bold;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .first-main {
+    display: block;
+  }
+
+  .first-main h1 {
+    color: #000;
+    font-family: -apple-system, SF Pro Display Regular;
+    font-size: 32px;
+    font-weight: 400;
+    padding-bottom: 48px;
+  }
+
+  .about-project-img {
+    display: block;
+    padding-bottom: 24px;
+  }
+
+  .card-theme {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0 36px;
+    width: 100%;
+    transition: 0.5s all ease-in-out;
+  }
+
+  .card-theme-item {
+    margin-bottom: 96px;
+  }
+
+  .card-main {
+    grid-column: unset;
+  }
+
+  .card-main img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    aspect-ratio: 9 / 16;
+  }
+
+  .footer-cta h4 {
+    color: #fff;
+    font-family: -apple-system, SF Pro Display SemiBold;
+    font-size: 18px;
+    font-weight: 600;
+    padding-bottom: 8px;
+  }
+
+  .footer-cta h1 {
+    color: #fff;
+    font-family: -apple-system, SF Pro Display Regular;
+    font-weight: 400;
+    font-size: 32px;
+    padding-bottom: 48px;
+  }
+
+  .footer-cta p {
+    color: #fff;
+    width: 100%;
+    font-family: -apple-system, SF Pro Display Regular;
+    font-weight: 400;
+    font-size: 18px;
+    padding-bottom: 48px;
+  }
+
+  .footer-cta-mobile h4 {
+    padding-top: 48px;
+    color: #fff;
+    font-family: -apple-system, SF Pro Display SemiBold;
+    font-size: 18px;
+    font-weight: 600;
+    padding-bottom: 8px;
+  }
+
+  .footer-cta-mobile h1 {
+    color: #fff;
+    font-family: -apple-system, SF Pro Display Regular;
+    font-weight: 400;
+    font-size: 32px;
+    padding-bottom: 24px;
+  }
+
+  .footer-cta-mobile p {
+    color: #fff;
+    width: 100%;
+    font-family: -apple-system, SF Pro Display Regular;
+    font-weight: 400;
+    font-size: 18px;
+    padding-bottom: 24px;
+  }
+
+  .first-about-main h1 {
+    padding-top: 192px;
+    width: 100%;
+    color: #000;
+    font-family: -apple-system, SF Pro Display Regular;
+    font-size: 32px;
+    padding-bottom: 48px;
+  }
+
+  .first-about-main h2 {
+    color: #000;
+    font-family: -apple-system, SF Pro Display Regular;
+    font-weight: 400;
+    font-size: 24px;
+    padding-bottom: 48px;
+  }
+
+  .first-about-main p {
+    width: 100%;
+    color: #000;
+    font-family: -apple-system, SF Pro Display Regular;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    padding-bottom: 48px;
+  }
+
+  .first-about-main .end {
+    width: 600px;
+    color: #000;
+    font-family: -apple-system, SF Pro Display Bold;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    padding-bottom: 192px;
+  }
+
+  .scrollTop {
+    bottom: 170px;
+    right: 16px;
+  }
+
+  .about-img {
+    display: block;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+  }
+
+  .about-img img,
+  .about-project-img img {
+    width: 100%;
+    height: 553px;
+    object-fit: cover;
+    padding-bottom: 48px;
+  }
+
+  .first-about-main .description,
+  .first-about-main .subtitle,
+  .first-about-main .title {
+    width: 100%;
+  }
+
+  .project-text h2 {
+    font-size: 24px;
+    letter-spacing: -0.01em;
+    padding-bottom: 8px;
+  }
+
+  .footer-cta-mobile .logo .footer-cta-mobile .social {
+    padding-top: 24px;
+    width: 104px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer-cta-mobile .social i {
+    font-size: 16px;
+    color: #fff;
+    padding: 4px;
+    border: 2px solid #fff;
+    border-radius: 52px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .footer-cta-mobile .social i:hover {
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+    font-size: 16px;
+    color: #fff;
+    padding: 4px;
+    border: 2px solid #fff;
+  }
+
+  .padding-p {
+    padding-top: 48px;
+  }
+
+  .card-item h4 {
+    width: 330px;
+  }
+}
